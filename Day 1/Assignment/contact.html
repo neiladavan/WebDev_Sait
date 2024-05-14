@@ -4,17 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: #ed7009; background-color: #c6d1d0">
   <!-- Start Content -->
-  <div>
-    <!-- Header -->
-    <a href="./index.html"><div align="center" style="background-image: url(../images/logo.png); width: 100%;">
-      <h1 style="display: inline-block; color: #d49502;">Welcome to Travel Experts</h1>
-    </div></a>
-    <!-- Header -->
+  <div class="container">
+    <div class="header">
+      <a href="./index.html">
+        <div class="header_logo">
+          <h1>Welcome to Travel Experts</h1>
+        </div>
+      </a>
+    </div>
+    <hr>
+    <div class="navbar">
+      <a href="home.html">Home</a>
+      <a href="contact.html">Contact</a>
+      <a href="register.html">Register</a>
+    </div>
     
-    <div style="width: 100%; margin: 0px 0px 10px 105px;">
+    <div style="width: 100%;">
       <ul style="display: inline-block;"> 
         <li>         
           <h3>EverywhereTravel</h3>
@@ -192,35 +205,13 @@
       </ul>
     </div>
 
-    <div style="width: 100%; border: 1px solid blue;">
-      <div style="border: 1px solid #d49502; display: inline-block; text-align: center; width: auto">      
-        <img src="../images/mayon.jpg" alt="" style="margin: 10px; width: auto;">
-        <h2>Mayon Volcano</h2>
-        <p>Albay, Philippines</p>
-      </div>
-
-      <div style="border: 1px solid #d49502; display: inline-block; text-align: center; width: auto;">      
-        <img src="../images/banawe.jpg" alt="" style="margin: 10px; width: auto;">
-        <h2>Banawe Rice Terraces</h2>
-        <p>Banawe, Philippines</p>
-      </div>
-
-      <div style="border: 1px solid #d49502; display: inline-block; text-align: center; width: auto;">      
-        <img src="../images/chocolate_hills.jpg" alt="" style="margin: 10px; width: auto;">
-        <h2>Chocolate Hills</h2>
-        <p>Bohol, Philippines</p>
-      </div>
-    </div>
-    
-    <div style="margin-top: 20px;">
+    <div class="footer">
       <hr style="border: 2px solid #000000;">
       <a href="./contact.html"><img src="../images/contact-information.png" alt="Contact Information" width="32px;"></a>
       <a href="./register.html"><img src="../images/regsister.png" alt="Register" width="32px;"></a>
-      <hr style="border: 2px solid #000000;">
-      <p><h6 style="color: #000000;">&copy; 2024 Everything For Less. All rights reserved.</h6></p>
-      <hr style="border: 2px solid #000000;">
+      <hr style="border: 2px solid #000000;">  
+      <h6 style="color: #000000;">&copy; 2024 Everything For Less. All rights reserved.</h6>   
     </div>
-  </div>
-  
+  </div>  
 </body>
 </html>

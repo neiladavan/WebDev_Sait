@@ -4,11 +4,223 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a href="./index.html">Go Back to Main Page</a>
-  <div align="center">
-    <img src="../images/maintenance.png" alt="Under Construction" />
+  <div class="container">
+    <div class="header">
+      <a href="./index.html">
+        <div class="header_logo">
+          <h1>Welcome to Travel Experts</h1>
+        </div>
+      </a>
+    </div>
+    <hr>
+
+    <div class="navbar">
+      <a href="home.html">Home</a>
+      <a href="contact.html">Contact</a>
+      <a href="register.html">Register</a>
+    </div>
+
+    <form action="" class="form-horizontal">
+      <div class="row">
+        <h3>Flight Reservation:</h3>      
+        <div class="col-md-6">          
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Title:</label>
+            <div class="col-sm-6">
+              <select class="form-control" name="registrationTitle" id="registrationTitle">
+                <option value="Mr.">Mr.</option>
+                <option value="Ms">Ms.</option>
+                <option value="Mrs">Mrs.</option>
+              </select>       
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label"><b style="color:red">*</b></font> First Name</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Firstname" required/>        
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label"><b style="color:red">*</b></font> Last Name</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Lastname" required/>        
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Date of Birth</label>
+            <div class="col-sm-6">
+              <input type="date" class="form-control" name="dob" id="dob"/>        
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label"><b style="color:red">*</b></font> Email:</label>
+            <div class="col-sm-6">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Email" required/>        
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Phone Number:</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Phone Number"/>        
+            </div>
+          </div>
+
+          <h4>Address Details:</h4>
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Street Address:</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" name="street" id="street" placeholder="Street"/>        
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label">City:</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" name="city" id="city" placeholder="City"/>        
+            </div>
+            <label class="col-sm-3 control-label">State/Province:</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" name="province" id="province" placeholder="State/Province"/>        
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-3 control-label">Postal Code:</label>
+            <div class="col-sm-3">
+              <input type="text" class="form-control" name="postalCode" id="postalCode" placeholder="Postal Code"/>        
+            </div>
+            <label class="col-sm-3 control-label">Country:</label>
+            <div class="col-sm-3">
+              <select class="form-control" name="country" id="country">
+                <option value="CND">Canada</option>
+                <option value="USA">USA</option>
+                <option value="MXC">Mexico</option>
+                <option value="PH">Philippines</option>
+              </select>              
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 other-details">
+          <div class="form-group">
+            <label class="col-sm-6 control-label">Flight Type:</label>
+            <div class="col-sm-6">
+              <input type="radio" name="flightType" id="flightType" value="INT">&nbsp;International&nbsp;
+              <input type="radio" name="flightType" id="flightType" value="DOM">&nbsp;Domestic&nbsp;
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-6 control-label">From:</label>
+            <div class="col-sm-6">
+              <select class="form-control" name="destination" id="destination">
+                <option value="CND">Canada</option>
+                <option value="USA">USA</option>
+                <option value="MXC">Mexico</option>
+                <option value="PH">Philippines</option>
+              </select>
+              <!-- <input type="text" class="form-control" name="fromLocation" id="fromLocation" placeholder="From"/>         -->
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-6 control-label">Destination:</label>
+            
+            <div class="col-sm-6">
+              <select class="form-control" name="destination" id="destination">
+                <option value="CND">Canada</option>
+                <option value="USA">USA</option>
+                <option value="MXC">Mexico</option>
+                <option value="PH">Philippines</option>
+              </select>
+              <!-- <input type="text" class="form-control" name="destination" id="destination" placeholder="Destination"/>         -->
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-6 control-label">Departure Date & Time:</label>
+            <div class="col-sm-6">
+              <input type="datetime-local" name="deptDateTime" id="deptDateTime">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-6 control-label">Return Date & Time:</label>
+            <div class="col-sm-6">
+              <input type="datetime-local" name="returnDateTime" id="returnDateTime">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-6 control-label">Adults:</label>
+            <div class="col-sm-6">
+              <input type="number" name="adults" id="adults" min="1" max="10" value="1" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-6 control-label">Child: (below 10 years old)</label>
+            <div class="col-sm-6">
+              <input type="number" name="child" id="child" min="0" max="10" value="0" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-6 control-label">Total Amount:</label>
+            <div class="col-sm-6">
+              <input type="text" name="totalAmount" id="totalAmount" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-6 control-label">Payment Method:</label>
+            <div class="col-sm-6">
+              <input type="radio" name="paymentMethod" id="paymentMethod" value="Credit Card"> Credit Card
+              <input type="radio" name="paymentMethod" id="paymentMethod" value="Bank"> Bank
+              <input type="radio" name="paymentMethod" id="paymentMethod" value="Paypal"> Paypal
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-6 control-label">Special Request:</label>
+            <div class="col-sm-6">
+              <textarea name="specialRequest" id="specialRequest" cols="30" rows="10"></textarea>
+            </div>
+          </div>
+        </div>      
+      </div>
+
+      <div class="row">  
+        <div class="col-md-6"> 
+          <div class="form-group">
+            <div class="col-sm-6">
+              <input type="submit" value="Submit">      
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="footer">
+      <hr style="border: 2px solid #000000;">
+      <a href="./contact.html"><img src="../images/contact-information.png" alt="Contact Information" width="32px;"></a>
+      <a href="./register.html"><img src="../images/regsister.png" alt="Register" width="32px;"></a>
+      <hr style="border: 2px solid #000000;">  
+      <h6 style="color: #000000;">&copy; 2024 Everything For Less. All rights reserved.</h6>   
+    </div>
+
   </div>
 </body>
 </html>
