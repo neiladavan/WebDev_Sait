@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Everything For LESS</title>
+
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
   
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -17,6 +20,10 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
+    .container .row {
+      background: rgba(255,255,255,.5);
+    }
+
     .row
     {
       display: flex;
@@ -32,6 +39,18 @@
     .column img
     {
       width: 100%;
+      border-radius: 30dvh;
+    }
+
+    .column h2{
+      color: #283714;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .column p{
+      color: rgb(181, 54, 32);
+      font-style: italic;
     }
   </style>
   
@@ -46,12 +65,25 @@
       </a>
     </div>
     <hr>
-
-    <div class="navbar">
-      <a href="home.html">Home</a>
-      <a href="contact.html">Contact</a>
-      <a href="register.html">Register</a>
-    </div>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="home">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <div class="row">
       <div class="column">

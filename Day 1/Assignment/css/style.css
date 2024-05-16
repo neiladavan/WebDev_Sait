@@ -1,8 +1,9 @@
 body
 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-  color: #e9580a; 
-  background-color: #c6d1d0;
+  color: #283714; 
+  /* background-color: #c6d1d0; */
+  background-image: url(../../images/background2.png);
 }
 .header .header_logo
 {
@@ -35,10 +36,22 @@ body
 {
   text-align: left;
   width: 20%;
+  color: #304910;
 }
 
 .form-horizontal .other-details .control-label 
 {
   text-align: left;
   width: 30%;
+}
+
+.form-horizontal input
+{
+  background-color: #d09ecd;
+}
+
+.row h3{
+  color: #283714;
+  font-weight: bold;
+  margin-left: 12px;
 }
