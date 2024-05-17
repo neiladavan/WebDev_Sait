@@ -12,6 +12,10 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   
   <link rel="stylesheet" href="css/style.css">
+
+  <script type="text/javascript" src="./js/script.js">
+    
+  </script>
 </head>
 <body>
   <div class="container">
@@ -35,7 +39,7 @@
         <h3>Flight Reservation:</h3>      
         <div class="col-md-6">          
           <div class="form-group">
-            <label class="col-sm-3 control-label">Title:</label>
+            <label class="col-sm-3 control-label" for="registrationTitle">Title:</label>
             <div class="col-sm-6">
               <select class="form-control" name="registrationTitle" id="registrationTitle">
                 <option value="Mr.">Mr.</option>
@@ -46,14 +50,15 @@
           </div>
 
           <div class="form-group">
-            <label class="col-sm-3 control-label"><b style="color:red">*</b></font> First Name</label>
+            <label class="col-sm-3 control-label" for="firstname">
+              <b style="color:red" class="requiredField">* </b>First Name</label>
             <div class="col-sm-6">
               <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Firstname" required/>        
             </div>
           </div>
 
           <div class="form-group">
-            <label class="col-sm-3 control-label"><b style="color:red">*</b></font> Last Name</label>
+            <label class="col-sm-3 control-label"><b style="color:red" class="requiredField">* </b>Last Name</label>
             <div class="col-sm-6">
               <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Lastname" required/>        
             </div>
@@ -67,7 +72,7 @@
           </div>
 
           <div class="form-group">
-            <label class="col-sm-3 control-label"><b style="color:red">*</b></font> Email:</label>
+            <label class="col-sm-3 control-label"><b style="color:red" class="requiredField">* </b>Email:</label>
             <div class="col-sm-6">
               <input type="email" class="form-control" name="email" id="email" placeholder="Email" required/>        
             </div>
@@ -120,15 +125,15 @@
           <div class="form-group">
             <label class="col-sm-6 control-label">Flight Type:</label>
             <div class="col-sm-6">
-              <input type="radio" name="flightType" id="flightType" value="INT">&nbsp;International&nbsp;
-              <input type="radio" name="flightType" id="flightType" value="DOM">&nbsp;Domestic&nbsp;
+              <input type="radio" name="flightType" id="flightType1" value="INT">&nbsp;International&nbsp;
+              <input type="radio" name="flightType" id="flightType2" value="DOM">&nbsp;Domestic&nbsp;
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-6 control-label">From:</label>
             <div class="col-sm-6">
-              <select class="form-control" name="destination" id="destination">
+              <select class="form-control" name="fromLocation" id="fromLocation">
                 <option value="CND">Canada</option>
                 <option value="USA">USA</option>
                 <option value="MXC">Mexico</option>
@@ -169,7 +174,7 @@
           <div class="form-group">
             <label class="col-sm-6 control-label">Adults:</label>
             <div class="col-sm-6">
-              <input type="number" name="adults" id="adults" min="1" max="10" value="1" />
+              <input type="number" name="adults" id="adults" min="1" max="10" value="1" onchange="computeTotalAmount();"/>
             </div>
           </div>
 
@@ -190,9 +195,9 @@
           <div class="form-group">
             <label class="col-sm-6 control-label">Payment Method:</label>
             <div class="col-sm-6">
-              <input type="radio" name="paymentMethod" id="paymentMethod" value="Credit Card"> Credit Card
-              <input type="radio" name="paymentMethod" id="paymentMethod" value="Bank"> Bank
-              <input type="radio" name="paymentMethod" id="paymentMethod" value="Paypal"> Paypal
+              <input type="radio" name="paymentMethod" id="creditCard" value="Credit Card"> Credit Card
+              <input type="radio" name="paymentMethod" id="bank" value="Bank"> Bank
+              <input type="radio" name="paymentMethod" id="paypal" value="Paypal"> Paypal
             </div>
           </div>
 
@@ -209,8 +214,8 @@
         <div class="col-md-6"> 
           <div class="form-group">
             <div class="col-sm-6">
-              <input type="submit" value="Submit">  
-              <input type="reset" value="Clear">    
+              <input type="submit" value="Submit" onclick="return confirm(`Are you sure you want to submit?`);">  
+              <input type="reset" value="Clear" onclick="return confirm(`Are you sure you want to clear the form?`);">    
             </div>
           </div>
         </div>

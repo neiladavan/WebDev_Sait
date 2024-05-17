@@ -1,25 +1,22 @@
-body
-{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-  color: #283714; 
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #283714;
   /* background-color: #c6d1d0; */
   background-image: url(../../images/background2.png);
 }
-.header .header_logo
-{
+.header .header_logo {
   text-align: center;
   background-image: url(../../images/logo.png);
   width: 100%;
 }
 
-.header_logo h1
-{
-  display: inline-block; 
+.header_logo h1 {
+  display: inline-block;
   color: #d49502;
 }
 
-.navbar
-{
+.navbar {
   background-color: #4a4a4a;
 }
 
@@ -32,26 +29,35 @@ body
 }
 
 /* For Registration */
-.form-horizontal .control-label
-{
+.form-horizontal {
+  background-color: #c6d1d0;
+  padding: 0px 20px;
+}
+.form-horizontal .control-label {
   text-align: left;
   width: 20%;
   color: #304910;
 }
 
-.form-horizontal .other-details .control-label 
-{
+.form-horizontal .other-details .control-label {
   text-align: left;
   width: 30%;
 }
 
-.form-horizontal input
-{
+.form-horizontal input {
   background-color: #d09ecd;
 }
 
-.row h3{
+.row h3 {
   color: #283714;
   font-weight: bold;
   margin-left: 12px;
+}
+
+.row h4{
+  font-weight: bold;
+}
+
+.form-group .requiredField {
+  color: rgb(204, 25, 25);
 }
