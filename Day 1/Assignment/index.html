@@ -4,8 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  
+  <style>
+    .imageTable, table, th, td
+    {
+      border:1px solid rgb(18, 72, 21);
+      background-color: gray;
+      text-align: center;
+      color: green;
+    }
+  </style>
+
+  <script type="text/javascript">
+    function buildMyImageTable()
+    {
+      let images = ['mayon.jpg', 'banawe.jpg', 'chocolate_hills.jpg', 'coron.jpg'];
+      let description = ['Mayon Volcano', 'Banawe', 'Chocolate Hills', 'Coron'];
+
+      let myImageTable = document.getElementById("myImageTable");
+
+      let htmlBuild = myImageTable.innerHTML;
+      htmlBuild += '<table><thead><tr><th scope="col">Image</th><th scope="col">Description</th></tr></thead><tbody>';
+      
+      for (i=0; i < images.length; i++)
+      {
+        htmlBuild += '<tr><td><img src="../images/'+images[i]+'" style="vertical-align: bottom;" width="100%" height="100%"></td>';
+        htmlBuild += "<td align=center>" + description[i] + "</td></tr>";
+      }
+
+      htmlBuild += "</tbody></table>"
+
+	    document.getElementById("myImageTable").innerHTML = htmlBuild;
+
+      myImageTable.getElementsByTagName('table')[0].className = "imageTable";
+    }
+  </script>
+
 </head>
-<body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: #e9580a">
+<body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: #e9580a" onload="buildMyImageTable()">
   <div>
     <div style="background-image: url(../images/logo.png); width: 100%; text-align: center;">
       <h1 style="display: inline-block; color: #d49502;">Welcome to Travel Experts</h1>
@@ -29,43 +65,9 @@
         <h2>Chocolate Hills</h2>
         <p>Bohol, Philippines</p>
       </div>
-
-      <div style="border: 1px solid #d49502; display: inline-block; text-align: center; width: auto;">      
-        <img src="../images/mayon.jpg" alt="" style="margin: 10px; width: auto;">
-        <h2>Mayon Volcano</h2>
-        <p>Manila, Philippines</p>
-      </div>
-
-      <div style="border: 1px solid #d49502; display: inline-block; text-align: center; width: auto;">      
-        <img src="../images/mayon.jpg" alt="" style="margin: 10px; width: auto;">
-        <h2>Mayon Volcano</h2>
-        <p>Manila, Philippines</p>
-      </div>
-
-      <div style="border: 1px solid #d49502; display: inline-block; text-align: center; width: auto;">      
-        <img src="../images/mayon.jpg" alt="" style="margin: 10px; width: auto;">
-        <h2>Mayon Volcano</h2>
-        <p>Manila, Philippines</p>
-      </div>
-
-      <div style="border: 1px solid #d49502; display: inline-block; text-align: center; width: auto;">      
-        <img src="../images/mayon.jpg" alt="" style="margin: 10px; width: auto;">
-        <h2>Mayon Volcano</h2>
-        <p>Manila, Philippines</p>
-      </div>
-
-      <div style="border: 1px solid #d49502; display: inline-block; text-align: center; width: auto;">      
-        <img src="../images/mayon.jpg" alt="" style="margin: 10px; width: auto;">
-        <h2>Mayon Volcano</h2>
-        <p>Manila, Philippines</p>
-      </div>
-
-      <div style="border: 1px solid #d49502; display: inline-block; text-align: center; width: auto;">      
-        <img src="../images/mayon.jpg" alt="" style="margin: 10px; width: auto;">
-        <h2>Mayon Volcano</h2>
-        <p>Manila, Philippines</p>
-      </div>
     </div>
+
+    <div id="myImageTable"></div>
     
     <div style="margin-top: 20px;">
       <hr style="border: 2px solid #000000;">
