@@ -28,8 +28,8 @@
       
       for (i=0; i < images.length; i++)
       {
-        htmlBuild += '<tr><td><img src="../images/'+images[i]+'" style="vertical-align: bottom;" width="100%" height="100%"></td>';
-        htmlBuild += "<td align=center>" + description[i] + "</td></tr>";
+        htmlBuild += `<tr><td><img src="../images/${images[i]}" style="vertical-align: bottom;" width="100%" height="100%"></td>`;
+        htmlBuild += `<td align=center>${description[i]}</td></tr>`;
       }
 
       htmlBuild += "</tbody></table>"
