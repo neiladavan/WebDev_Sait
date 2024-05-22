@@ -117,22 +117,22 @@
       Added computation to automatically change direction
       Currently set to 3secs(3000ms)
     */
-    // setInterval(function() {
-    //   let imageElementId = document.getElementById('imageChange');
+    setInterval(function() {
+      let imageElementId = document.getElementById('imageChange');
 
-    //   let imagePositionXAxis = Math.floor(Math.random() * winScreenWidth);
-    //   let imagePositionYAxis = Math.floor(Math.random() * winScreenHeight);
+      let imagePositionXAxis = Math.floor(Math.random() * winScreenWidth);
+      let imagePositionYAxis = Math.floor(Math.random() * winScreenHeight);
 
-    //   if (imagePositionXAxis + imageElementId.width >= winScreenWidth)
-    //     imagePositionXAxis = 1000;
+      if (imagePositionXAxis + imageElementId.width >= winScreenWidth)
+        imagePositionXAxis = 1000;
 
-    //   if (imagePositionYAxis + imageElementId.height >= winScreenHeight)
-    //     imagePositionYAxis = 400;
+      if (imagePositionYAxis + imageElementId.height >= winScreenHeight)
+        imagePositionYAxis = 400;
 
-    //   imageElementId.style.position = 'absolute';
-    //   imageElementId.style.left = imagePositionXAxis + 'px';
-    //   imageElementId.style.top = imagePositionYAxis + 'px';
-    // }, 3000);
+      imageElementId.style.position = 'absolute';
+      imageElementId.style.left = imagePositionXAxis + 'px';
+      imageElementId.style.top = imagePositionYAxis + 'px';
+    }, 3000);
 
     /* Add this function in body tag as onload function if you want to instead of the option above */
     // function moveImage(){
@@ -153,10 +153,7 @@
       //Option 1 without converting the element to array
       // loop thru the element
       for (let i = 0; i < images.length; i++) {
-        if (images[i] === event.target) {
-          //document.getElementById('selectedImage').innerHTML = '<img src=' + images[i].src + '>';
-          break; // Stop the loop once the image is found
-        }
+        if (images[i] === event.target) break; // Stop the loop once the image is found
       }
 
       //Option 2 convert the element to array
@@ -177,9 +174,9 @@
       setTimeout(() => newWindow.close(), 10000);
     }
 
+    // When mouseover, the image mvoes automatically
+    // Challenge in assignment
     function changePosition() {
-      // When mouseover, the image mvoes automatically
-      // Challenge in assignment
       const imageElementId = document.getElementById(event.target.id);
 
       let imagePositionXAxis = Math.floor(Math.random() * winScreenWidth);
@@ -195,6 +192,7 @@
       imageElementId.style.left = imagePositionXAxis + 'px';
       imageElementId.style.top = imagePositionYAxis + 'px';
     }
+
     // Two arrays for images and description
     let images = [
       'mayon.jpg',
@@ -274,9 +272,6 @@
 
       document.getElementsByTagName('main')[0].appendChild(sectionElemNode);
     }
-  
-    // Log the result
-    console.log(resultObject);
   </script>
 
   <footer>
