@@ -6,253 +6,283 @@
 -->
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sample Gallery</title>
-    <!-- Reset CSS -->
-    <link
-      rel="stylesheet"
-      href="https://meyerweb.com/eric/tools/css/reset/reset.css"
-    />
+<html lang='en'>
 
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-      body {
-        background-image: url("../images/background2.png");
-      }
-      header a {
-        background-image: url("https://img.freepik.com/free-photo/pouch-map-toy-airplane-blue-background-with-space-writing-text_23-2147958180.jpg");
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 50px;
-        color: #1c1e24;
-        text-shadow: #000 2px 2px 0.2rem;
-        font-family: "Caveat", cursive;
-        font-size: x-large;
-        text-decoration: none;
-      }
-      main {
-        display: flex;
-        flex-wrap: wrap;
-        text-align: center;               
-        justify-content: space-evenly;
-      }
-      main>section {
-        flex: 1 1 calc(50% - 60px);
-        margin: 5px;
-        box-sizing: border-box; 
-      }
-      figure {
-        margin: 0;
-      }
-      figure > img {        
-        /*height: 200px;*/
-        object-fit: cover;
-        border-radius: 5%;
-      }
-      figcaption {
-        background-color: rgba(18, 43, 123, 0.3);
-        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-          "Lucida Sans", Arial, sans-serif;
-        border-radius: 55%;
-      }
-      footer {
-        background-image: url("https://img.freepik.com/free-photo/pouch-map-toy-airplane-blue-background-with-space-writing-text_23-2147958180.jpg");
-        display: flex;
-        justify-content: left;
-        padding: 5px;
-        color: #1c1e24;
-        font-size: x-large;
-        text-decoration: none;
-        font-weight: bolder;
-        align-items: center;
-        height: 50px;
-      }
-      #imageChange{
-        position: absolute;
-        width: 50px;
-        height: auto;
-      }
+<head>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Sample Gallery</title>
+  <!-- Reset CSS -->
+  <link rel='stylesheet' href='https://meyerweb.com/eric/tools/css/reset/reset.css' />
 
-      #selectedImage>img{
-        height: 50px;
-        justify-content: right;
-      }
-    </style>
-  </head>
-  <body>
-    <section id="selectedImage"></section>
-    <img src="../images/sing.png" alt="" id="imageChange" onmouseover="changePosition()">
+  <link rel='stylesheet' href='css/style.css'>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-    <header>
-      <a href="#">Welcome to Travel Experts</a>
-    </header>
+    body {
+      background-image: url('../images/background2.png');
+    }
 
-    <div class="navbar">
-      <a href="home.html">Home</a>
-      <a href="contact.html">Contact</a>
-      <a href="register.html">Register</a>
-    </div>
+    header a {
+      background-image: url('https://img.freepik.com/free-photo/pouch-map-toy-airplane-blue-background-with-space-writing-text_23-2147958180.jpg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      color: #1c1e24;
+      text-shadow: #000 2px 2px 0.2rem;
+      font-family: 'Caveat', cursive;
+      font-size: x-large;
+      text-decoration: none;
+    }
 
-    <main></main>
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: space-evenly;
+    }
 
-    <script>
-      const winScreenWidth = screen.width;
-      const winScreenHeight = screen.height;
-        
-      /*
-        Change Image position after "X" number of seconds
-        Added computation to automatically change direction
-        Currently set to 3secs(3000ms)
-      */
-      // setInterval(function() {
-      //   let imageElementId = document.getElementById('imageChange');
+    main>section {
+      flex: 1 1 calc(50% - 60px);
+      margin: 5px;
+      box-sizing: border-box;
+    }
 
-      //   let imagePositionXAxis = Math.floor(Math.random() * winScreenWidth);
-      //   let imagePositionYAxis = Math.floor(Math.random() * winScreenHeight);
+    figure {
+      margin: 0;
+    }
 
-      //   if (imagePositionXAxis + imageElementId.width >= winScreenWidth)
-      //     imagePositionXAxis = 1000;
+    figure>img {
+      /*height: 200px;*/
+      object-fit: cover;
+      border-radius: 5%;
+    }
 
-      //   if (imagePositionYAxis + imageElementId.height >= winScreenHeight)
-      //     imagePositionYAxis = 400;
+    figcaption {
+      background-color: rgba(18, 43, 123, 0.3);
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+        'Lucida Sans', Arial, sans-serif;
+      border-radius: 55%;
+    }
 
-      //   imageElementId.style.position = "absolute";
-      //   imageElementId.style.left = imagePositionXAxis + "px";
-      //   imageElementId.style.top = imagePositionYAxis + "px";
-      // }, 3000);
+    footer {
+      background-image: url('https://img.freepik.com/free-photo/pouch-map-toy-airplane-blue-background-with-space-writing-text_23-2147958180.jpg');
+      display: flex;
+      justify-content: left;
+      padding: 5px;
+      color: #1c1e24;
+      font-size: x-large;
+      text-decoration: none;
+      font-weight: bolder;
+      align-items: center;
+      height: 50px;
+    }
 
-      /* Add this function in body tag as onload function if you want to instead of the option above */
-      // function moveImage(){
-      //   setInterval(() => {
-      //     const winScreen = screen.width;
-      //     let imagePosition = Math.floor(Math.random() * winScreen);
-      //     console.log(imagePosition);
+    #imageChange {
+      position: absolute;
+      width: 50px;
+      height: auto;
+    }
 
-      //     let myImageElement = document.getElementById('imageChange');
-      //     myImageElement.style.left = imagePosition + "px";
-      //   }, 1000);
-      // }      
-      
-      function showImageOnMouseHover() {
-        // Get all <img> elements
-        const images = document.getElementsByTagName("img");
+    #selectedImage>img {
+      height: 50px;
+      justify-content: right;
+    }
+  </style>
+</head>
 
-        //Option 1 without converting the element to array
-        // loop thru the element
-        for (let i = 0; i < images.length; i++) {
-          if (images[i] === event.target) {
-            //document.getElementById("selectedImage").innerHTML = "<img src=" + images[i].src + ">";
-            break; // Stop the loop once the image is found
-          }
+<body>
+  <section id='selectedImage'></section>
+  <img src='../images/sing.png' alt='' id='imageChange' onmouseover='changePosition()'>
+
+  <header>
+    <a href='#'>Welcome to Travel Experts</a>
+  </header>
+
+  <div class='navbar'>
+    <a href='home.html'>Home</a>
+    <a href='contact.html'>Contact</a>
+    <a href='register.html'>Register</a>
+  </div>
+
+  <main></main>
+
+  <script>
+    const winScreenWidth = screen.width;
+    const winScreenHeight = screen.height;
+
+    /*
+      Change Image position after 'X' number of seconds
+      Added computation to automatically change direction
+      Currently set to 3secs(3000ms)
+    */
+    // setInterval(function() {
+    //   let imageElementId = document.getElementById('imageChange');
+
+    //   let imagePositionXAxis = Math.floor(Math.random() * winScreenWidth);
+    //   let imagePositionYAxis = Math.floor(Math.random() * winScreenHeight);
+
+    //   if (imagePositionXAxis + imageElementId.width >= winScreenWidth)
+    //     imagePositionXAxis = 1000;
+
+    //   if (imagePositionYAxis + imageElementId.height >= winScreenHeight)
+    //     imagePositionYAxis = 400;
+
+    //   imageElementId.style.position = 'absolute';
+    //   imageElementId.style.left = imagePositionXAxis + 'px';
+    //   imageElementId.style.top = imagePositionYAxis + 'px';
+    // }, 3000);
+
+    /* Add this function in body tag as onload function if you want to instead of the option above */
+    // function moveImage(){
+    //   setInterval(() => {
+    //     const winScreen = screen.width;
+    //     let imagePosition = Math.floor(Math.random() * winScreen);
+    //     console.log(imagePosition);
+
+    //     let myImageElement = document.getElementById('imageChange');
+    //     myImageElement.style.left = imagePosition + 'px';
+    //   }, 1000);
+    // }      
+
+    function showImageOnMouseHover() {
+      // Get all <img> elements
+      const images = document.getElementsByTagName('img');
+
+      //Option 1 without converting the element to array
+      // loop thru the element
+      for (let i = 0; i < images.length; i++) {
+        if (images[i] === event.target) {
+          //document.getElementById('selectedImage').innerHTML = '<img src=' + images[i].src + '>';
+          break; // Stop the loop once the image is found
         }
-
-        //Option 2 convert the element to array
-        // Convert HTMLCollection to an array
-        const imagesArray = Array.from(images);
-        const imageIndex = imagesArray.indexOf(event.target);
-
-        document.getElementById("selectedImage").innerHTML = "<img src=" + imagesArray[imageIndex].src + ">";
       }
 
-      function openNewWindowAndClose() {
-        const imagesArray = Array.from(document.getElementsByTagName("img"));
-        const imageIndex = imagesArray.indexOf(event.target);
+      //Option 2 convert the element to array
+      // Convert HTMLCollection to an array
+      const imagesArray = Array.from(images);
+      const imageIndex = imagesArray.indexOf(event.target);
 
-        const newWindow = window.open(imagesArray[imageIndex].alt, '_blank');
+      document.getElementById('selectedImage').innerHTML = '<img src=' + imagesArray[imageIndex].src + '>';
+    }
 
-        setTimeout(() => newWindow.close(), 10000);
-      }
+    function openNewWindowAndClose() {
+      const imagesArray = Array.from(document.getElementsByTagName('img'));
+      const imageIndex = imagesArray.indexOf(event.target);
 
-      function changePosition() {
-        // When mouseover, the image mvoes automatically
-        // Challenge in assignment
-        const imageElementId = document.getElementById(event.target.id);
-        
-        let imagePositionXAxis = Math.floor(Math.random() * winScreenWidth);
-        let imagePositionYAxis = Math.floor(Math.random() * winScreenHeight);
+      const newWindow = window.open(imagesArray[imageIndex].alt, 'myChromeWindow', 'popup');
+      newWindow.resizeTo(800, 800);
 
-        if (imagePositionXAxis + imageElementId.width >= winScreenWidth)
-          imagePositionXAxis = 1000;
+      setTimeout(() => newWindow.close(), 10000);
+    }
 
-        if (imagePositionYAxis + imageElementId.height >= winScreenHeight)
-          imagePositionYAxis = 400;
+    function changePosition() {
+      // When mouseover, the image mvoes automatically
+      // Challenge in assignment
+      const imageElementId = document.getElementById(event.target.id);
 
-        imageElementId.style.position = "absolute";
-        imageElementId.style.left = imagePositionXAxis + "px";
-        imageElementId.style.top = imagePositionYAxis + "px";
-      }
-      // Two arrays for images and description
-      let images = [
-        "mayon.jpg",
-        "banawe.jpg",
-        "chocolate_hills.jpg",
-        "beach_boracay.png",
-        "coron.jpg",
-        "oslob.jpg",
-      ];
-      let description = [
-        "Mayon Volcano",
-        "Banawe Rice Terraces",
-        "Chocolate Hills",
-        "Boracay",
-        "Coron",
-        "Oslob Whale Sharks",
-      ];
-      // Added array for imageUrl
-      let imageUrl = [
-        "https://www.britannica.com/place/Mayon-Volcano",
-        "https://www.britannica.com/place/Banaue-rice-terraces",
-        "http://www.chocolatehills.net/",
-        "https://guidetothephilippines.ph/articles/ultimate-guides/boracay-travel-guide",
-        "https://www.tripadvisor.ca/Attractions-g729733-Activities-Coron_Busuanga_Island_Palawan_Province_Mimaropa.html",
-        "https://www.oslobwhalesharks.com/",
-      ];
+      let imagePositionXAxis = Math.floor(Math.random() * winScreenWidth);
+      let imagePositionYAxis = Math.floor(Math.random() * winScreenHeight);
 
-      let sectionElemNode;
-      let figureElemNode;
-      let imageNode;
-      let figcaptionNode;
+      if (imagePositionXAxis + imageElementId.width >= winScreenWidth)
+        imagePositionXAxis = 1000;
 
-      //let baseURL = `${window.location}/images/`;
+      if (imagePositionYAxis + imageElementId.height >= winScreenHeight)
+        imagePositionYAxis = 400;
+
+      imageElementId.style.position = 'absolute';
+      imageElementId.style.left = imagePositionXAxis + 'px';
+      imageElementId.style.top = imagePositionYAxis + 'px';
+    }
+    // Two arrays for images and description
+    let images = [
+      'mayon.jpg',
+      'banawe.jpg',
+      'chocolate_hills.jpg',
+      'beach_boracay.png',
+      'coron.jpg',
+      'oslob.jpg',
+    ];
+    let description = [
+      'Mayon Volcano',
+      'Banawe Rice Terraces',
+      'Chocolate Hills',
+      'Boracay',
+      'Coron',
+      'Oslob Whale Sharks',
+    ];
+    // Added array for imageUrl
+    let imageUrl = [
+      'https://www.britannica.com/place/Mayon-Volcano',
+      'https://www.britannica.com/place/Banaue-rice-terraces',
+      'http://www.chocolatehills.net/',
+      'https://guidetothephilippines.ph/articles/ultimate-guides/boracay-travel-guide',
+      'https://www.tripadvisor.ca/Attractions-g729733-Activities-Coron_Busuanga_Island_Palawan_Province_Mimaropa.html',
+      'https://www.oslobwhalesharks.com/',
+    ];
+
+    let sectionElemNode;
+    let figureElemNode;
+    let imageNode;
+    let figcaptionNode;
+
+    let baseURL = '../images/';
+
+    // Initialize the resulting object
+    const resultObject = {
+        images: [],
+        description: [],
+        url: []
+    };
+    // Loop through the arrays
+    // Build section, figure, img, figcaption
+    // Using createElement and innerHTML
+    for (i = 0; i < images.length; i++) {
+      resultObject.images.push(images[i]);
+      resultObject.description.push(description[i]);
+      resultObject.url.push(imageUrl[i]);
       
-      // Loop through the arrays
-      // Build section, figure, img, figcaption
-      // Using createElement and innerHTML
-      for (i = 0; i < images.length; i++) {
-        sectionElemNode = document.createElement("section");
+      sectionElemNode = document.createElement('section');
 
-        figureElemNode = document.createElement("figure");
+      figureElemNode = document.createElement('figure');
 
-        imageNode = document.createElement("img");
-        imageNode.setAttribute("src", "../images/" + images[i]);
-        imageNode.setAttribute("alt", imageUrl[i]);
-        imageNode.setAttribute("onmouseover", "showImageOnMouseHover()");
-        imageNode.setAttribute(
-          "onmouseout",
-          "document.getElementById('selectedImage').innerHTML=''"
-        );
-        imageNode.setAttribute("onclick", "openNewWindowAndClose()");
+      imageNode = document.createElement('img');
+      imageNode.src = baseURL + images[i];
+      imageNode.alt = imageUrl[i];
+      imageNode.onmouseover = showImageOnMouseHover;
+      imageNode.onmouseout = function() {
+        document.getElementById('selectedImage').innerHTML=''
+      };
+      imageNode.onclick = openNewWindowAndClose;
+      // imageNode.setAttribute('src', baseURL + images[i]);
+      // imageNode.setAttribute('alt', imageUrl[i]);
+      // imageNode.setAttribute('onmouseover', 'showImageOnMouseHover()');
+      // imageNode.setAttribute(
+      //   'onmouseout',
+      //   "document.getElementById('selectedImage').innerHTML=''"
+      // );
+      // imageNode.setAttribute('onclick', 'openNewWindowAndClose()');
 
-        figcaptionNode = document.createElement("figcaption");
-        figcaptionNode.innerHTML = description[i];
+      figcaptionNode = document.createElement('figcaption');
+      figcaptionNode.innerHTML = description[i];
 
-        figureElemNode.appendChild(imageNode);
-        figureElemNode.appendChild(figcaptionNode);
+      figureElemNode.appendChild(imageNode);
+      figureElemNode.appendChild(figcaptionNode);
 
-        sectionElemNode.appendChild(figureElemNode);
+      sectionElemNode.appendChild(figureElemNode);
 
-        document.getElementsByTagName("main")[0].appendChild(sectionElemNode);
-      }
-    </script>
+      document.getElementsByTagName('main')[0].appendChild(sectionElemNode);
+    }
+  
+    // Log the result
+    console.log(resultObject);
+  </script>
 
-    <footer>
-      <small>© 2024 SAIT: Neil Aldrin Adavan</small>
-      <address></address>
-    </footer>
-  </body>
+  <footer>
+    <small>© 2024 SAIT: Neil Aldrin Adavan</small>
+    <address></address>
+  </footer>
+</body>
+
 </html>

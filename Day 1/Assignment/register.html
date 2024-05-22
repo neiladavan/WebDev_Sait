@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +11,10 @@
 
   <!-- Latest compiled and minified CSS -->
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-  
-  <link rel="stylesheet" href="css/style.css">
 
-  <script type="text/javascript" src="./js/script.js">
-    
-  </script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <div class="container">
     <div class="header">
@@ -34,10 +32,10 @@
       <a href="register.html">Register</a>
     </div>
 
-    <form action="" class="form-horizontal">
+    <form action="" class="form-horizontal" name="frmRegistration">
       <div class="row">
-        <h3>Flight Reservation:</h3>      
-        <div class="col-md-6">          
+        <h3>Flight Reservation:</h3>
+        <div class="col-md-6">
           <div class="form-group">
             <label class="col-sm-3 control-label" for="registrationTitle">Title:</label>
             <div class="col-sm-6">
@@ -45,43 +43,47 @@
                 <option value="Mr.">Mr.</option>
                 <option value="Ms">Ms.</option>
                 <option value="Mrs">Mrs.</option>
-              </select>       
+              </select>
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-3 control-label" for="firstname">
-              <b style="color:red" class="requiredField">* </b>First Name</label>
+              <b class="requiredField">* </b>First Name</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Firstname" required/>        
+              <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Firstname" />
+              <p class="error-msg" id="firstnameError">Firstname is required!</p>
             </div>
+
           </div>
 
           <div class="form-group">
             <label class="col-sm-3 control-label"><b style="color:red" class="requiredField">* </b>Last Name</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Lastname" required/>        
+              <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Lastname" />
+              <p class="error-msg" id="lastnameError">Lastname is required!</p>
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-3 control-label">Date of Birth</label>
             <div class="col-sm-6">
-              <input type="date" class="form-control" name="dob" id="dob"/>        
+              <input type="date" class="form-control" name="dob" id="dob" />
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-3 control-label"><b style="color:red" class="requiredField">* </b>Email:</label>
             <div class="col-sm-6">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Email" required/>        
+              <input type="email" class="form-control" name="email" id="email" placeholder="Email" />
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-3 control-label">Phone Number:</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Phone Number"/>        
+              <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Phone Number" />
+              <p class="error-msg" id="phoneNumberError">Phone number is required!</p>
             </div>
           </div>
 
@@ -89,25 +91,29 @@
           <div class="form-group">
             <label class="col-sm-3 control-label">Street Address:</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" name="street" id="street" placeholder="Street"/>        
+              <input type="text" class="form-control" name="street" id="street" placeholder="Street" />
+              <p class="error-msg" id="streetError">Street Address is required!</p>
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-3 control-label">City:</label>
             <div class="col-sm-2">
-              <input type="text" class="form-control" name="city" id="city" placeholder="City"/>        
+              <input type="text" class="form-control" name="city" id="city" placeholder="City" />
+              <p class="error-msg" id="cityError">City is required!</p>
             </div>
             <label class="col-sm-3 control-label">State/Province:</label>
             <div class="col-sm-4">
-              <input type="text" class="form-control" name="province" id="province" placeholder="State/Province"/>        
+              <input type="text" class="form-control" name="province" id="province" placeholder="State/Province" />
+              <p class="error-msg" id="provinceError">State/Province is required!</p>
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-3 control-label">Postal Code:</label>
             <div class="col-sm-3">
-              <input type="text" class="form-control" name="postalCode" id="postalCode" placeholder="Postal Code"/>        
+              <input type="text" class="form-control" name="postalCode" id="postalCode" placeholder="Postal Code" />
+              <p class="error-msg" id="postalCodeError">Postal Code is required!</p>
             </div>
             <label class="col-sm-3 control-label">Country:</label>
             <div class="col-sm-3">
@@ -116,7 +122,7 @@
                 <option value="USA">USA</option>
                 <option value="MXC">Mexico</option>
                 <option value="PH">Philippines</option>
-              </select>              
+              </select>
             </div>
           </div>
         </div>
@@ -145,7 +151,7 @@
 
           <div class="form-group">
             <label class="col-sm-6 control-label">Destination:</label>
-            
+
             <div class="col-sm-6">
               <select class="form-control" name="destination" id="destination">
                 <option value="CND">Canada</option>
@@ -174,7 +180,8 @@
           <div class="form-group">
             <label class="col-sm-6 control-label">Adults:</label>
             <div class="col-sm-6">
-              <input type="number" name="adults" id="adults" min="1" max="10" value="1" onchange="computeTotalAmount();"/>
+              <input type="number" name="adults" id="adults" min="1" max="10" value="1"
+                onchange="computeTotalAmount();" />
             </div>
           </div>
 
@@ -188,7 +195,7 @@
           <div class="form-group">
             <label class="col-sm-6 control-label">Total Amount:</label>
             <div class="col-sm-6">
-              <input type="text" name="totalAmount" id="totalAmount" />
+              <input type="number" name="totalAmount" id="totalAmount" readonly />
             </div>
           </div>
 
@@ -207,29 +214,34 @@
               <textarea name="specialRequest" id="specialRequest" cols="30" rows="10"></textarea>
             </div>
           </div>
-        </div>      
+        </div>
       </div>
 
-      <div class="row">  
-        <div class="col-md-6"> 
+      <div class="row">
+        <div class="col-md-6">
           <div class="form-group">
             <div class="col-sm-6">
-              <input type="submit" value="Submit" onclick="return confirm(`Are you sure you want to submit?`);">  
-              <input type="reset" value="Clear" onclick="return confirm(`Are you sure you want to clear the form?`);">    
+              <input type="submit" value="Submit" onclick="return frmRegistrationValidation();">
+              <input type="reset" value="Clear" onclick="return confirm(`Are you sure you want to clear the form?`);">
             </div>
           </div>
         </div>
       </div>
+
+      <p id="frmSubmitMessage"></p>
     </form>
 
     <div class="footer">
       <hr style="border: 2px solid #000000;">
       <a href="./contact.html"><img src="../images/contact-information.png" alt="Contact Information" width="32px;"></a>
       <a href="./register.html"><img src="../images/regsister.png" alt="Register" width="32px;"></a>
-      <hr style="border: 2px solid #000000;">  
-      <h6 style="color: #000000;">&copy; 2024 Everything For Less. All rights reserved.</h6>   
+      <hr style="border: 2px solid #000000;">
+      <h6 style="color: #000000;">&copy; 2024 Everything For Less. All rights reserved.</h6>
     </div>
 
   </div>
+
+  <script type="text/javascript" src="./js/script.js"></script>
 </body>
+
 </html>

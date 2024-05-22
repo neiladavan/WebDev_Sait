@@ -5,6 +5,7 @@ body {
   /* background-color: #c6d1d0; */
   background-image: url(../../images/background2.png);
 }
+
 .header .header_logo {
   text-align: center;
   background-image: url(../../images/logo.png);
@@ -33,6 +34,7 @@ body {
   background-color: #c6d1d0;
   padding: 0px 20px;
 }
+
 .form-horizontal .control-label {
   text-align: left;
   width: 20%;
@@ -54,10 +56,25 @@ body {
   margin-left: 12px;
 }
 
-.row h4{
+.row h4 {
   font-weight: bold;
 }
 
 .form-group .requiredField {
   color: rgb(204, 25, 25);
+}
+
+.error-msg {
+  color: red;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 2px;
+  display: none;
+}
+
+#frmSubmitMessage{
+  color: red;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 2px;
 }
