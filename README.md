@@ -1,4 +1,5 @@
-Web Development Course Exercises/Assignment
+Web Development Course Exercises/Assignment:
+
 Day 1   
 │   ├───Assignment
 │   │   │   contact.html
